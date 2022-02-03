@@ -2,6 +2,8 @@
 
 This is a work in progress.
 
+![FANTAZ landing page by Čedomir Babić](./landing_page.jpg?raw=true 'FANTAZ blog')
+
 ## Stack
 
 Using NextJS and MaterialUI
