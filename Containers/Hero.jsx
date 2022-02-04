@@ -8,7 +8,7 @@ import { Box, Typography, Button } from '@mui/material';
 
 import brand1 from '../public/images/brands/evernote.png';
 import brand2 from '../public/images/brands/forbes.png';
-import brand3 from '../public/images/brands/geekwire.png';
+// import brand3 from '../public/images/brands/geekwire.png';
 import brand4 from '../public/images/brands/slack.png';
 
 const brands = [
@@ -32,7 +32,7 @@ const brands = [
 
 const Hero = () => {
   return (
-    <Box sx={{ height: '100vh' }}>
+    <Box sx={{ height: '100vh', marginTop: '5rem' }}>
       <Layout>
         <Box id="hero" sx={styles.hero}>
           <Box sx={styles.hero__text}>

@@ -6,15 +6,34 @@ import Footer from '../Containers/Footer';
 import Hero from '../Containers/Hero';
 import Testimonials from '../Containers/Testimonials';
 
-const Home = () => {
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import { AppBar } from '@mui/material';
+
+import ScrollToColor02 from '../helpers/scrollToColor';
+
+import ScrollTop from '../helpers/scrollToTop';
+
+const Home = (props) => {
   return (
     <>
-      <Navbar />
+      <ScrollToColor02 {...props}>
+        <AppBar>
+          <Navbar />
+        </AppBar>
+      </ScrollToColor02>
+      <div id="back-to-top-anchor" />
       <Hero />
       <Features />
       <Banner />
       <Testimonials />
       <Faq />
+      <ScrollTop {...props}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
       <Footer />
     </>
   );

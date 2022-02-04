@@ -9,6 +9,16 @@ const buttonBase = {
 };
 
 export const components = {
+  MuiFab: {
+    styleOverrides: {
+      circular: {
+        backgroundColor: blue[600],
+        '&:hover': {
+          backgroundColor: blue[900],
+        },
+      },
+    },
+  },
   MuiButton: {
     styleOverrides: {
       outlined: {
@@ -27,12 +37,11 @@ export const components = {
       },
       contained: {
         ...buttonBase,
-        backgroundColor: blue[900],
+        backgroundColor: blue[600],
         color: '#fff',
         border: '1px solid transparent',
         '&:hover': {
-          backgroundColor: 'transparent',
-          color: grey[900],
+          backgroundColor: blue[900],
           boxShadow: `
       0px 2px 4px rgba(46,41,51,0.08),
       0px 5px 10px rgba(71,63,79,0.16)
