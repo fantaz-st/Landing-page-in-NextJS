@@ -21,7 +21,7 @@ const Testimonials = () => {
         </Box>
         <Box>
           <Swiper
-            autoplay={{ delay: '5000' }}
+            autoplay={{ delay: '3000' }}
             slidesPerView={3}
             slidesPerGroup={1}
             spaceBetween={30}
@@ -78,6 +78,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     gap: '3rem',
+    userSelect: 'none',
   },
   testimonials__text: {
     textAlign: 'center',

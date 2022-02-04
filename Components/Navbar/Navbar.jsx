@@ -36,7 +36,9 @@ const Navbar = () => {
           <Box as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }) => (
               <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500}>
-                <Typography sx={styles.navLink}>{label}</Typography>
+                <Typography variant="link2" sx={styles.navLink}>
+                  {label}
+                </Typography>
               </ReactScrollLink>
             ))}
           </Box>
@@ -61,18 +63,5 @@ const styles = {
     display: ['none', 'none', 'none', 'flex'],
     gap: '1rem',
     cursor: 'pointer',
-  },
-  navLink: {
-    fontSize: '1rem',
-    color: '#8D448B',
-    fontWeight: '400',
-    cursor: 'pointer',
-    lineHeight: '1.2',
-    transition: '500ms',
-
-    '&:hover, &.active': {
-      color: '#fff',
-      backgroundColor: 'yellow',
-    },
   },
 };
