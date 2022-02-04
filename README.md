@@ -2,6 +2,10 @@
 
 This is a work in progress.
 
+# Live site
+
+See the site [here](https://fantaz-landing.vercel.app/)
+
 ![FANTAZ landing page by Čedomir Babić](./landing_page.jpg?raw=true 'FANTAZ blog')
 
 ## Stack
