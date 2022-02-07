@@ -81,7 +81,7 @@ const Navbar = () => {
           <Button sx={{ display: { xs: 'none', md: 'block' } }} variant="outlined">
             Get Started
           </Button>
-          <IconButton size="large" edge="start" sx={{ mr: 2, color: '#000' }} onClick={openMenu}>
+          <IconButton size="large" edge="start" sx={{ mr: 2, color: '#000', display: { xs: 'block', md: 'none' } }} onClick={openMenu}>
             <MenuIcon />
           </IconButton>
           <Drawer open={menuOpen} onClose={(e) => setMenuOpen(false)}>
