@@ -22,6 +22,10 @@ const menuItems = [
     label: 'FAQ',
   },
   {
+    path: 'pricing',
+    label: 'Pricing',
+  },
+  {
     path: 'news',
     label: 'News',
   },

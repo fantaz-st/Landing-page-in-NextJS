@@ -32,9 +32,9 @@ const features = [
 
 const Features = () => {
   return (
-    <Box sx={{ backgroundColor: '#F6F8FB' }}>
+    <Box sx={{ backgroundColor: '#F6F8FB' }} id="features">
       <Layout>
-        <Box sx={styles.features__container} id="features">
+        <Box sx={styles.features__container}>
           <Box sx={styles.features__info}>
             <Typography variant="h2">Businesses start with great features</Typography>
             <Typography variant="body2">
@@ -75,6 +75,7 @@ const styles = {
     marginTop: '6rem',
     display: 'grid',
     gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)'],
+    gridGap: '2rem',
   },
   feature: {
     display: 'flex',

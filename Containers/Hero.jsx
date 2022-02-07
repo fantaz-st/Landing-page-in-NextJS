@@ -56,7 +56,7 @@ const Hero = () => {
               Trusted by companies like:
             </Typography>
             {brands.map((brand) => (
-              <Image src={brand.icon} key={brand.title} alt={brand.title} heigth="40px" width="100px" objectFit="contain" />
+              <Image src={brand.icon} key={brand.title} alt={brand.title} width="100px" heigth="30px" />
             ))}
           </Box>
         </Box>

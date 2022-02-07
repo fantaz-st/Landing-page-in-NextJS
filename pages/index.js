@@ -14,6 +14,7 @@ import { AppBar } from '@mui/material';
 import ScrollToColor02 from '../helpers/scrollToColor';
 
 import ScrollTop from '../helpers/scrollToTop';
+import Pricinig from '../Containers/Pricinig';
 
 const Home = (props) => {
   return (
@@ -29,6 +30,7 @@ const Home = (props) => {
       <Banner />
       <Testimonials />
       <Faq />
+      <Pricinig />
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
