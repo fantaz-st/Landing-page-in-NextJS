@@ -69,18 +69,17 @@ const styles = {
   },
   features__info: {
     margin: '0 auto',
-    width: '50%',
+    width: ['100%', '100%', '50%'],
   },
   features__flex: {
     marginTop: '6rem',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    gap: '3rem',
+    display: 'grid',
+    gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)'],
   },
   feature: {
     display: 'flex',
     flexDirection: 'column',
     gap: '0.6rem',
+    marginBottom: '2rem',
   },
 };

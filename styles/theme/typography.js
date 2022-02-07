@@ -1,14 +1,14 @@
 import { grey, indigo, blue } from '@mui/material/colors';
 
 const heading = {
-  fontFamily: 'Montserrat, sans-serif',
+  fontFamily: 'Poppins, sans-serif',
 
   color: grey[800],
   fontWeight: '600',
 };
 
 const body = {
-  fontFamily: 'Montserrat, sans-serif',
+  fontFamily: 'Poppins, sans-serif',
   color: '#000',
   fontWeight: '400',
 };
@@ -16,7 +16,7 @@ const body = {
 const link = {
   cursor: 'pointer',
   fontWeight: '500',
-  fontFamily: 'Montserrat, sans-serif',
+  fontFamily: 'Poppins, sans-serif',
 
   '&:hover': {
     color: indigo[500],
@@ -24,7 +24,7 @@ const link = {
 };
 
 export const typography = {
-  fontFamily: 'Montserrat, sans-serif',
+  fontFamily: 'Poppins, sans-serif',
 
   h1: {
     ...heading,

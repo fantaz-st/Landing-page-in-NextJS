@@ -12,13 +12,13 @@ const Footer = () => {
     <Box>
       <Layout>
         <Box sx={styles.footer}>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Box mb="2rem" sx={{ display: { xs: 'none', lg: 'flex' }, flexDirection: 'column' }}>
             <Logo />
             <Typography variant="body3">Terms of Use | Privacy</Typography>
             <Typography variant="body3">{`Copyright © ${new Date().getFullYear()}`}</Typography>
           </Box>
           <Box>
-            <Typography mb="2rem" variant="body3" sx={{ fontSize: '1.2rem', fontWeight: '600' }}>
+            <Typography my="2rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
               About Us
             </Typography>
             <ul style={{ marginTop: '1.5rem', padding: '0' }}>
@@ -32,7 +32,7 @@ const Footer = () => {
             </ul>
           </Box>
           <Box>
-            <Typography mb="2rem" variant="body3" sx={{ fontSize: '1.2rem', fontWeight: '600' }}>
+            <Typography my="7rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
               Our Information
             </Typography>
             <ul style={{ marginTop: '1.5rem', padding: '0' }}>
@@ -46,7 +46,7 @@ const Footer = () => {
             </ul>
           </Box>
           <Box>
-            <Typography mb="2rem" variant="body3" sx={{ fontSize: '1.2rem', fontWeight: '600' }}>
+            <Typography my="2rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
               My Account
             </Typography>
             <ul style={{ marginTop: '1.5rem', padding: '0' }}>
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </Box>
           <Box>
-            <Typography mb="2rem" variant="body3" sx={{ fontSize: '1.2rem', fontWeight: '600' }}>
+            <Typography my="2rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
               My Account
             </Typography>
             <ul style={{ marginTop: '1.5rem', padding: '0' }}>
@@ -86,13 +86,10 @@ export default Footer;
 
 const styles = {
   footer: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'space-around',
+    marginTop: '5rem',
+    display: 'grid',
+    gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)', 'repeat(5, 1fr)'],
+    gridGap: '2rem',
     padding: '2rem 0',
-    div: {
-      width: '100%',
-    },
   },
 };

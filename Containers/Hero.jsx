@@ -70,7 +70,7 @@ export default Hero;
 const styles = {
   hero: {
     height: '100%',
-    width: '100%',
+    minWidth: '100%',
     display: 'grid',
     gridTemplateColumns: ['1fr', '1fr', '1fr 1fr', '1fr 1fr'],
     gridGap: '0',
