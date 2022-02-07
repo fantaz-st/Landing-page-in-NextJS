@@ -29,9 +29,6 @@ export default Banner;
 
 const styles = {
   banner: {
-    height: '100%',
-    width: '100%',
-    padding: '5rem 0',
     display: 'grid',
     gridTemplateColumns: ['1fr', '1fr', '1fr 1fr', '2fr 3fr'],
   },

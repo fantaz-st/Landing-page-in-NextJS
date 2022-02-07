@@ -9,6 +9,16 @@ const buttonBase = {
 };
 
 export const components = {
+  MuiContainer: {
+    styleOverrides: {
+      root: {
+        maxWidth: '1200px',
+        margin: '0 auto',
+        flex: '1',
+        padding: '6rem 0 3rem 0',
+      },
+    },
+  },
   MuiFab: {
     styleOverrides: {
       circular: {

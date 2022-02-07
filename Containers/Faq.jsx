@@ -11,25 +11,23 @@ const Faq = () => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <Layout>
-      <Box sx={styles.faq} id="faq">
-        <Box sx={styles.faq__text}>
-          <Typography variant="h2">Frequently Asked Questions</Typography>
-          <Typography variant="h4">What question on your mind, lets find the answers</Typography>
-        </Box>
-        {faqQuestions.map(({ content, title }, i) => (
-          <Accordion variant="themed" key={i} expanded={expanded === `panel${i}`} onChange={handleChange(`panel${i}`)}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="`panel${i}bh-content`" id="`panel${i}bh-header`">
-              <Typography variant="body3" sx={{ fontWeight: '600', lineHeight: '3rem' }}>
-                {`0${i + 1}. ${title}`}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body3">{content}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
+    <Layout id="faq" style={{ maxWidth: '700px' }}>
+      <Box sx={styles.faq__text}>
+        <Typography variant="h2">Frequently Asked Questions</Typography>
+        <Typography variant="h4">What question on your mind, lets find the answers</Typography>
       </Box>
+      {faqQuestions.map(({ content, title }, i) => (
+        <Accordion variant="themed" key={i} expanded={expanded === `panel${i}`} onChange={handleChange(`panel${i}`)}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="`panel${i}bh-content`" id="`panel${i}bh-header`">
+            <Typography variant="body3" sx={{ fontWeight: '600', lineHeight: '3rem' }}>
+              {`0${i + 1}. ${title}`}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="body3">{content}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
     </Layout>
   );
 };

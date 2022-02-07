@@ -32,36 +32,34 @@ const brands = [
 
 const Hero = () => {
   return (
-    <Box sx={{ height: '100vh', marginTop: '5rem' }}>
-      <Layout>
-        <Box id="hero" sx={styles.hero}>
-          <Box sx={styles.hero__text}>
-            <Typography variant="h1">Experience your ultimate mobile application</Typography>
-            <Typography variant="body1">
-              Get your blood tests delivered at let home collect sample from the victory of the managements that supplies best design system
-              guidelines ever.
-            </Typography>
-            <Box sx={styles.buttonBox}>
-              <Button variant="contained">Get Started</Button>
-              <Button variant="text" startIcon={<PlayCircleFilledIcon />}>
-                Watch Video
-              </Button>
-            </Box>
-          </Box>
-          <Box sx={styles.hero__image}>
-            <Image src={bannerImage} objectFit="contain" layout="fill" quality={100} alt="hero banner" />
-          </Box>
-          <Box sx={styles.trustedby}>
-            <Typography sx={{ flexGrow: '1' }} variant="body3">
-              Trusted by companies like:
-            </Typography>
-            {brands.map((brand) => (
-              <Image src={brand.icon} key={brand.title} alt={brand.title} width="100px" heigth="30px" />
-            ))}
+    <Layout id="hero">
+      <Box sx={styles.hero}>
+        <Box sx={styles.hero__text}>
+          <Typography variant="h1">Experience your ultimate mobile application</Typography>
+          <Typography variant="body1">
+            Get your blood tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines
+            ever.
+          </Typography>
+          <Box sx={styles.buttonBox}>
+            <Button variant="contained">Get Started</Button>
+            <Button variant="text" startIcon={<PlayCircleFilledIcon />}>
+              Watch Video
+            </Button>
           </Box>
         </Box>
-      </Layout>
-    </Box>
+        <Box sx={styles.hero__image}>
+          <Image src={bannerImage} objectFit="contain" layout="fill" quality={100} alt="hero banner" />
+        </Box>
+        <Box sx={styles.trustedby}>
+          <Typography sx={{ flexGrow: '1' }} variant="body3">
+            Trusted by companies like:
+          </Typography>
+          {brands.map((brand) => (
+            <Image src={brand.icon} key={brand.title} alt={brand.title} width="100px" heigth="30px" />
+          ))}
+        </Box>
+      </Box>
+    </Layout>
   );
 };
 

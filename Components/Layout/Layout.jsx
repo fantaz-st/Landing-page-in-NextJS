@@ -1,11 +1,15 @@
 import { Box } from '@mui/material';
 
-const Layout = ({ children }) => {
-  return <Box sx={styles.layout}>{children}</Box>;
+const Layout = ({ children, ...rest }) => {
+  return (
+    <Box {...rest} sx={styles.layout}>
+      {children}
+    </Box>
+  );
 };
 
 export default Layout;
 
 const styles = {
-  layout: { maxWidth: '1200px', margin: '0 auto', flex: '1', padding: { md: '0', xs: '0 1rem' } },
+  layout: { maxWidth: '1200px', margin: '0 auto', flex: '1', padding: '6rem 1rem 3rem 1rem' },
 };

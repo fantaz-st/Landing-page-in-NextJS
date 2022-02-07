@@ -43,12 +43,7 @@ const Navbar = () => {
 
   const list = () => {
     return (
-      <Box
-        sx={{ width: '250px', padding: '1.3rem 1rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}
-        role="presentation"
-        onClick={(e) => setMenuOpen(false)}
-        onKeyDown={(e) => setMenuOpen(false)}
-      >
+      <Box sx={styles.drawer} role="presentation" onClick={(e) => setMenuOpen(false)} onKeyDown={(e) => setMenuOpen(false)}>
         <Logo />
         <List>
           {menuItems.map(({ path, label }) => (
@@ -66,12 +61,12 @@ const Navbar = () => {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Layout>
+      <Layout style={{ padding: '0' }}>
         <Box sx={styles.container}>
           <Logo sx={styles.logo} />
           <Box as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }) => (
-              <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500}>
+              <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500} offset={-100}>
                 <Typography variant="link2" sx={styles.navLink}>
                   {label}
                 </Typography>
@@ -84,7 +79,7 @@ const Navbar = () => {
           <IconButton size="large" edge="start" sx={{ mr: 2, color: '#000', display: { xs: 'block', md: 'none' } }} onClick={openMenu}>
             <MenuIcon />
           </IconButton>
-          <Drawer open={menuOpen} onClose={(e) => setMenuOpen(false)}>
+          <Drawer anchor="right" open={menuOpen} onClose={(e) => setMenuOpen(false)}>
             {list()}
           </Drawer>
         </Box>
@@ -102,6 +97,13 @@ const styles = {
     justifyContent: 'space-between',
     padding: '1rem 0',
     margin: '0 auto ',
+  },
+  drawer: {
+    width: '250px',
+    padding: '1.3rem 1rem',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2rem',
   },
   nav: {
     display: ['none', 'none', 'none', 'flex'],

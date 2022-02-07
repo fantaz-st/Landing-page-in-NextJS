@@ -64,8 +64,8 @@ const PriceCard = ({ card: { name, price, pricePostfix, features } }) => {
 
 const Pricinig = () => {
   return (
-    <Box sx={{ backgroundColor: '#F6F8FB', padding: '6rem 0' }} id="pricing">
-      <Layout>
+    <Box sx={{ backgroundColor: '#F6F8FB' }}>
+      <Layout id="pricing">
         <Box sx={styles.pricing__text}>
           <Typography variant="h2">Pricing Plan</Typography>
           <Typography variant="h4">Choose your pricing policy</Typography>

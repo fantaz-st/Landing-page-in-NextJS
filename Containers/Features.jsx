@@ -32,28 +32,26 @@ const features = [
 
 const Features = () => {
   return (
-    <Box sx={{ backgroundColor: '#F6F8FB' }} id="features">
-      <Layout>
-        <Box sx={styles.features__container}>
-          <Box sx={styles.features__info}>
-            <Typography variant="h2">Businesses start with great features</Typography>
-            <Typography variant="body2">
-              Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.
-            </Typography>
-          </Box>
-          <Box sx={styles.features__flex}>
-            {features.map((feature) => (
-              <Box sx={styles.feature} key={feature.title}>
-                <Box>
-                  <Image src={feature.icon} alt={feature.title} height="75px" width="75px" />
-                </Box>
-                <Typography variant="body3" sx={{ fontWeight: '600' }}>
-                  {feature.title}
-                </Typography>
-                <Typography variant="body3">{feature.text}</Typography>
+    <Box sx={{ backgroundColor: '#F6F8FB' }}>
+      <Layout id="features" style={{ textAlign: 'center' }}>
+        <Box sx={styles.features__info}>
+          <Typography variant="h2">Businesses start with great features</Typography>
+          <Typography variant="body2">
+            Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.
+          </Typography>
+        </Box>
+        <Box sx={styles.features__flex}>
+          {features.map((feature) => (
+            <Box sx={styles.feature} key={feature.title}>
+              <Box>
+                <Image src={feature.icon} alt={feature.title} height="75px" width="75px" />
               </Box>
-            ))}
-          </Box>
+              <Typography variant="body3" sx={{ fontWeight: '600' }}>
+                {feature.title}
+              </Typography>
+              <Typography variant="body3">{feature.text}</Typography>
+            </Box>
+          ))}
         </Box>
       </Layout>
     </Box>
@@ -65,7 +63,6 @@ export default Features;
 const styles = {
   features__container: {
     textAlign: 'center',
-    padding: '5rem 0',
   },
   features__info: {
     margin: '0 auto',
