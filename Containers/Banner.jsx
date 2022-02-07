@@ -39,6 +39,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     gap: '1rem',
+    marginBottom: '2rem',
   },
   banner__image: {
     display: 'block',
