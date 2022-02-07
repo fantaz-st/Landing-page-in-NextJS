@@ -1,8 +1,11 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, IconButton, Drawer, List, ListItem } from '@mui/material';
 
 import { Link as ReactScrollLink } from 'react-scroll';
 import Layout from '../Layout/Layout';
 import Logo from '../Logo/Logo';
+
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
 
 const menuItems = [
   {
@@ -32,6 +35,35 @@ const menuItems = [
 ];
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const openMenu = () => {
+    setMenuOpen(true);
+  };
+
+  const list = () => {
+    return (
+      <Box
+        sx={{ width: '250px', padding: '1.3rem 1rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}
+        role="presentation"
+        onClick={(e) => setMenuOpen(false)}
+        onKeyDown={(e) => setMenuOpen(false)}
+      >
+        <Logo />
+        <List>
+          {menuItems.map(({ path, label }) => (
+            <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500} onClick={(e) => setMenuOpen(false)}>
+              <ListItem sx={styles.mobile_link} button>
+                {label}
+              </ListItem>
+            </ReactScrollLink>
+          ))}
+        </List>
+        <Button variant="contained">Get Started</Button>
+      </Box>
+    );
+  };
+
   return (
     <Box sx={{ width: '100%' }}>
       <Layout>
@@ -46,7 +78,15 @@ const Navbar = () => {
               </ReactScrollLink>
             ))}
           </Box>
-          <Button variant="outlined">Get Started</Button>
+          <Button sx={{ display: { xs: 'none', md: 'block' } }} variant="outlined">
+            Get Started
+          </Button>
+          <IconButton size="large" edge="start" sx={{ mr: 2, color: '#000' }} onClick={openMenu}>
+            <MenuIcon />
+          </IconButton>
+          <Drawer open={menuOpen} onClose={(e) => setMenuOpen(false)}>
+            {list()}
+          </Drawer>
         </Box>
       </Layout>
     </Box>
@@ -67,5 +107,11 @@ const styles = {
     display: ['none', 'none', 'none', 'flex'],
     gap: '1rem',
     cursor: 'pointer',
+  },
+  mobile_link: {
+    fontSize: '1rem',
+    lineHeight: '1.33rem',
+    fontWeight: '600',
+    fontFamily: 'Poppins, sans-serif',
   },
 };
