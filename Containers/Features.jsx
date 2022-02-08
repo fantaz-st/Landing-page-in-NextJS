@@ -7,6 +7,8 @@ import icon3 from '../public/images/features/customization.svg';
 import icon4 from '../public/images/features/analytics.svg';
 import Layout from '../Components/Layout/Layout';
 
+import { motion } from 'framer-motion';
+
 const features = [
   {
     icon: icon1,
@@ -40,7 +42,7 @@ const Features = () => {
             Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.
           </Typography>
         </Box>
-        <Box sx={styles.features__flex}>
+        <Box component={motion.div} animate={{ scale: 1.1 }} sx={styles.features__flex}>
           {features.map((feature) => (
             <Box sx={styles.feature} key={feature.title}>
               <Box>

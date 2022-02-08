@@ -1,14 +1,14 @@
 import { grey, indigo, blue } from '@mui/material/colors';
 
 const heading = {
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily: 'Poppins',
 
   color: grey[800],
   fontWeight: '600',
 };
 
 const body = {
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily: 'Poppins',
   color: '#000',
   fontWeight: '400',
 };
@@ -16,7 +16,7 @@ const body = {
 const link = {
   cursor: 'pointer',
   fontWeight: '500',
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily: 'Poppins',
 
   '&:hover': {
     color: indigo[500],
@@ -24,7 +24,7 @@ const link = {
 };
 
 export const typography = {
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily: 'Poppins',
 
   h1: {
     ...heading,
