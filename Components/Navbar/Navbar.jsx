@@ -21,16 +21,16 @@ const menuItems = [
     label: 'Testimonials',
   },
   {
-    path: 'faq',
-    label: 'FAQ',
-  },
-  {
     path: 'pricing',
     label: 'Pricing',
   },
   {
     path: 'news',
     label: 'News',
+  },
+  {
+    path: 'faq',
+    label: 'FAQ',
   },
 ];
 

@@ -15,6 +15,7 @@ import ScrollToColor02 from '../helpers/scrollToColor';
 
 import ScrollTop from '../helpers/scrollToTop';
 import Pricinig from '../Containers/Pricinig';
+import News from '../Containers/News';
 
 const Home = (props) => {
   return (
@@ -29,8 +30,9 @@ const Home = (props) => {
       <Features />
       <Banner />
       <Testimonials />
-      <Faq />
       <Pricinig />
+      <News />
+      <Faq />
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
