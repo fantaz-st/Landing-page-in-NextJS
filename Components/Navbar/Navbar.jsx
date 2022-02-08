@@ -47,7 +47,16 @@ const Navbar = () => {
         <Logo />
         <List>
           {menuItems.map(({ path, label }) => (
-            <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500} onClick={(e) => setMenuOpen(false)}>
+            <ReactScrollLink
+              to={path}
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              key={path}
+              duration={500}
+              offset={-70}
+              onClick={(e) => setMenuOpen(false)}
+            >
               <ListItem sx={styles.mobile_link} button>
                 {label}
               </ListItem>
@@ -66,7 +75,7 @@ const Navbar = () => {
           <Logo sx={styles.logo} />
           <Box as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }) => (
-              <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500} offset={-100}>
+              <ReactScrollLink to={path} activeClass="active" spy={true} smooth={true} key={path} duration={500} offset={-50}>
                 <Typography variant="link2" sx={styles.navLink}>
                   {label}
                 </Typography>
