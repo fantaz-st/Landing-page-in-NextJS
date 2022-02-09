@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
 import Layout from '../Components/Layout/Layout';
+import { SlideFromRight } from '../helpers/framerAnimations';
 
 import bannerImage from '../public/images/image2.png';
 const Banner = () => {
@@ -17,9 +18,9 @@ const Banner = () => {
             Get Started
           </Button>
         </Box>
-        <Box sx={styles.banner__image}>
+        <SlideFromRight sx={styles.banner__image}>
           <Image className="lol" src={bannerImage} layout="responsive" objectFit="cover" quality={100} alt="banner" />
-        </Box>
+        </SlideFromRight>
       </Box>
     </Layout>
   );
