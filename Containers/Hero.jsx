@@ -10,6 +10,7 @@ import brand1 from '../public/images/brands/evernote.png';
 import brand2 from '../public/images/brands/forbes.png';
 // import brand3 from '../public/images/brands/geekwire.png';
 import brand4 from '../public/images/brands/slack.png';
+import { SlideUp, SlideFromRight } from '../helpers/framerAnimations';
 
 const brands = [
   {
@@ -35,21 +36,25 @@ const Hero = () => {
     <Layout id="hero">
       <Box sx={styles.hero}>
         <Box sx={styles.hero__text}>
-          <Typography variant="h1">Experience your ultimate mobile application</Typography>
-          <Typography variant="body1">
-            Get your blood tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines
-            ever.
-          </Typography>
-          <Box sx={styles.buttonBox}>
+          <SlideUp>
+            <Typography variant="h1">Experience your ultimate mobile application</Typography>
+          </SlideUp>
+          <SlideUp multiplier={1.5}>
+            <Typography variant="body1">
+              Get your blood tests delivered at let home collect sample from the victory of the managements that supplies best design system
+              guidelines ever.
+            </Typography>
+          </SlideUp>
+          <SlideUp multiplier={2} sx={styles.buttonBox}>
             <Button variant="contained">Get Started</Button>
             <Button variant="text" startIcon={<PlayCircleFilledIcon />}>
               Watch Video
             </Button>
-          </Box>
+          </SlideUp>
         </Box>
-        <Box sx={styles.hero__image}>
+        <SlideFromRight sx={styles.hero__image}>
           <Image src={bannerImage} objectFit="contain" layout="fill" quality={100} alt="hero banner" />
-        </Box>
+        </SlideFromRight>
         <Box sx={styles.trustedby}>
           <Typography sx={{ flexGrow: '1' }} variant="body3">
             Trusted by companies like:

@@ -7,16 +7,18 @@ import { aboutUs, ourInformation, myAccount, connect } from '../Components/Foote
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { SlideUp } from '../helpers/framerAnimations';
+
 const Footer = () => {
   return (
     <Layout style={{ marginTop: '1rem', paddingTop: '2rem' }}>
-      <Box sx={styles.footer}>
+      <SlideUp sx={styles.footer} multiplier={1}>
         <Box mb="2rem" sx={{ display: { xs: 'none', lg: 'flex' }, flexDirection: 'column' }}>
           <Logo />
           <Typography variant="body3">Terms of Use | Privacy</Typography>
           <Typography variant="body3">{`Copyright © ${new Date().getFullYear()}`}</Typography>
         </Box>
-        <Box>
+        <SlideUp multiplier={1}>
           <Typography my="2rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
             About Us
           </Typography>
@@ -29,8 +31,8 @@ const Footer = () => {
               </ListItemText>
             ))}
           </ul>
-        </Box>
-        <Box>
+        </SlideUp>
+        <SlideUp multiplier={1.5}>
           <Typography my="7rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
             Our Information
           </Typography>
@@ -43,8 +45,8 @@ const Footer = () => {
               </ListItemText>
             ))}
           </ul>
-        </Box>
-        <Box>
+        </SlideUp>
+        <SlideUp multiplier={2}>
           <Typography my="2rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
             My Account
           </Typography>
@@ -57,8 +59,8 @@ const Footer = () => {
               </ListItemText>
             ))}
           </ul>
-        </Box>
-        <Box>
+        </SlideUp>
+        <SlideUp multiplier={2.5}>
           <Typography my="2rem" variant="body3" sx={{ fontSize: '1rem', fontWeight: '600' }}>
             My Account
           </Typography>
@@ -74,8 +76,8 @@ const Footer = () => {
               </ListItemText>
             ))}
           </ul>
-        </Box>
-      </Box>
+        </SlideUp>
+      </SlideUp>
     </Layout>
   );
 };

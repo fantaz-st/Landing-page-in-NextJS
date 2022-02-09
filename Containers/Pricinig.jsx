@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../Components/Layout/Layout';
 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { ScaleUp } from '../helpers/framerAnimations';
 
 const priceCard = [
   {
@@ -71,8 +72,10 @@ const Pricinig = () => {
           <Typography variant="h4">Choose your pricing policy</Typography>
         </Box>
         <Box sx={styles.grid}>
-          {priceCard.map((card) => (
-            <PriceCard key={card.name} card={card} />
+          {priceCard.map((card, i) => (
+            <ScaleUp key={card.name} multiplier={i * 0.5}>
+              <PriceCard card={card} />
+            </ScaleUp>
           ))}
         </Box>
       </Layout>

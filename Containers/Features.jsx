@@ -1,13 +1,12 @@
 import Image from 'next/image';
+import Layout from '../Components/Layout/Layout';
 import { Box, Typography } from '@mui/material';
+import { ScaleUp, SlideUp } from '../helpers/framerAnimations';
 
 import icon1 from '../public/images/features/accessibility.svg';
 import icon2 from '../public/images/features/messaging.svg';
 import icon3 from '../public/images/features/customization.svg';
 import icon4 from '../public/images/features/analytics.svg';
-import Layout from '../Components/Layout/Layout';
-
-import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -36,15 +35,15 @@ const Features = () => {
   return (
     <Box sx={{ backgroundColor: '#F6F8FB' }}>
       <Layout id="features" style={{ textAlign: 'center' }}>
-        <Box sx={styles.features__info}>
+        <SlideUp sx={styles.features__info}>
           <Typography variant="h2">Businesses start with great features</Typography>
           <Typography variant="body2">
             Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.
           </Typography>
-        </Box>
-        <Box component={motion.div} animate={{ scale: 1.1 }} sx={styles.features__flex}>
-          {features.map((feature) => (
-            <Box sx={styles.feature} key={feature.title}>
+        </SlideUp>
+        <Box sx={styles.features__flex}>
+          {features.map((feature, i) => (
+            <ScaleUp sx={styles.feature} key={feature.title} multiplier={i}>
               <Box>
                 <Image src={feature.icon} alt={feature.title} height="75px" width="75px" />
               </Box>
@@ -52,7 +51,7 @@ const Features = () => {
                 {feature.title}
               </Typography>
               <Typography variant="body3">{feature.text}</Typography>
-            </Box>
+            </ScaleUp>
           ))}
         </Box>
       </Layout>
